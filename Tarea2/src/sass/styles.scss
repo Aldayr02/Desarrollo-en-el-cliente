@@ -1,0 +1,71 @@
+@import 'variables';
+
+// Mixin for Flexbox Centering
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin for Responsive Font Size
+@mixin responsive-font($size-small, $size-medium, $size-large) {
+  font-size: $size-small;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: $size-medium;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: $size-large;
+  }
+}
+
+// Function to calculate rems
+@function rem($pixels) {
+  @return $pixels / 16 * 1rem;
+}
+
+body {
+  font-family: $font-family;
+  color: $font-color;
+  background-color: $background-color;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: $padding;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-small) {
+    padding: rem(30px);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    max-width: rem(1400px);
+  }
+}
+
+.header {
+  margin-bottom: $padding;
+}
+
+.header h1 {
+  @include responsive-font(2rem, 2.5rem, 3rem);
+  margin-bottom: rem(10px);
+}
+
+.card {
+  background-color: $card-bg-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px $box-shadow-color;
+  margin-bottom: $padding;
+
+  @include flex-center;
+  flex-direction: column;
+
+  @extend .container;
+}
