@@ -26,6 +26,17 @@ fetch('assets/data.json')
     } else {
       console.error('Element with ID "contactInfo" not found');
     }
+
+    // Select the form by its ID
+    let contactForm = document.querySelector('#contactForm') as HTMLFormElement;
+
+    // Check if the form exists before updating
+    if (contactForm) {
+      // Update the form's action URL with the email from JSON
+      contactForm.action = `https://formsubmit.co/${data.formEmail}`;
+    } else {
+      console.error('Form with ID "contactForm" not found');
+    }
   })
   .catch((error) => {
     console.error('There was a problem with the fetch operation:', error);
