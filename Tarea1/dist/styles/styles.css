@@ -3,22 +3,22 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #46443F;
+  background-color: #31234B;
 }
 
 header {
-  background: #FE4743;
-  color: #FE4743;
+  background: #31234B;
+  color: #8F82C4;
   padding: 20px;
   text-align: center;
-  background-color: #3c3b37;
+  background-color: #1d162c;
 }
 
 section {
   margin: 20px auto;
   padding: 10px;
   max-width: 800px;
-  background-color: #5B5953;
+  background-color: #584D82;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -35,21 +35,21 @@ li, p {
   margin: 20px auto;
   padding: 10px;
   max-width: 800px;
-  background-color: #5B5953;
+  background-color: #584D82;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .CV .card {
-  border: solid 10px #393732;
+  border: solid 10px #3A2C57;
   width: 50%;
   float: left;
   box-sizing: border-box;
   height: 25%;
-  background-color: #46443F;
+  background-color: #31234B;
 }
 .CV .card h2 {
-  color: #FE4743;
+  color: #8F82C4;
   font-size: 1.5em;
 }
 

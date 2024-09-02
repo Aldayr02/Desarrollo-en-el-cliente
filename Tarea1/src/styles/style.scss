@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background: $header-color;
+    background: $secondary-color;
     color: $titles-color;
     padding: 20px;
     text-align: center;
@@ -59,7 +59,7 @@ li {
     @include box-style($cv-background-color);
 
     .card {
-        border: solid 10px #393732;
+        border: solid 10px $primary-color;
         width: 50%;
         float: left;
         box-sizing: border-box;
