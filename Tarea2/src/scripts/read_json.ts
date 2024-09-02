@@ -7,7 +7,7 @@ fetch('assets/data.json')
   })
   .then((data) => {
     // Select the h1 element by its new ID
-    let nameElement = document.querySelector('#name') as HTMLElement;
+    let nameElement = document.querySelector('#headerName') as HTMLElement;
 
     // Check if the element exists before updating
     if (nameElement) {

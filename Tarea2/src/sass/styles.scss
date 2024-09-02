@@ -88,4 +88,52 @@ ul {
   padding-left: 0;
 }
 
+.contact-form {
+  @include container-padding($padding-base);
+  display: flex;
+  flex-direction: column;
+  gap: $gap-small;
+  background-color: $card-background-color;
+  border-radius: $border-radius;
+  padding: $padding-base;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    input, textarea {
+      border: 1px solid $primary-color;
+      border-radius: $border-radius;
+      padding: 10px;
+      background-color: #fff;
+      color: $background-color;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+  }
+
+  button {
+    background-color: $secondary-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    padding: 10px;
+    cursor: pointer;
+    font-size: $font-size-medium;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
 
