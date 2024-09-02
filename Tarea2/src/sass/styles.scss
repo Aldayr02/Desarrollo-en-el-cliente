@@ -1,71 +1,91 @@
 @import 'variables';
 
-// Mixin for Flexbox Centering
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// Mixin for Responsive Font Size
-@mixin responsive-font($size-small, $size-medium, $size-large) {
-  font-size: $size-small;
+@mixin container-padding($padding) {
+  padding: $padding;
 
   @media (min-width: $breakpoint-small) {
-    font-size: $size-medium;
+    padding: $padding + 10px;
   }
 
-  @media (min-width: $breakpoint-medium) {
-    font-size: $size-large;
+  @media (min-width: $breakpoint-large) {
+    padding: $padding + 20px;
   }
 }
 
-// Function to calculate rems
-@function rem($pixels) {
-  @return $pixels / 16 * 1rem;
+// Mixin for font sizes
+@mixin font-size($size) {
+  font-size: $size;
 }
 
 body {
-  font-family: $font-family;
-  color: $font-color;
+  font-family: Arial, sans-serif;
+  color: $primary-color;
   background-color: $background-color;
-  line-height: $line-height;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  padding: $padding;
-  max-width: $max-width;
+  @include container-padding($padding-base);
+  max-width: 1200px;
   margin: 0 auto;
-
-  @media (min-width: $breakpoint-small) {
-    padding: rem(30px);
-  }
-
-  @media (min-width: $breakpoint-medium) {
-    max-width: rem(1400px);
-  }
 }
 
 .header {
-  margin-bottom: $padding;
-}
+  margin-bottom: $padding-base;
 
-.header h1 {
-  @include responsive-font(2rem, 2.5rem, 3rem);
-  margin-bottom: rem(10px);
+  h1 {
+    margin-bottom: $gap-small;
+    @include font-size($font-size-large);
+
+    @media (min-width: $breakpoint-small) {
+      @include font-size($font-size-large + 0.5rem);
+    }
+
+    @media (min-width: $breakpoint-large) {
+      @include font-size($font-size-large + 1rem);
+    }
+  }
 }
 
 .card {
-  background-color: $card-bg-color;
-  padding: $padding;
+  @include container-padding($padding-base);
   border-radius: $border-radius;
-  box-shadow: 0 4px 6px $box-shadow-color;
-  margin-bottom: $padding;
-
-  @include flex-center;
-  flex-direction: column;
-
-  @extend .container;
+  box-shadow: 0 4px 6px $shadow-color;
+  margin-bottom: $padding-base;
+  margin-top: $padding-base;
+  background-color: $card-background-color;
 }
+
+.contact-info {
+  margin-bottom: $padding-base;
+}
+
+.summary {
+  @include font-size($font-size-base);
+  color: $secondary-color;
+}
+
+h2 {
+  color: $secondary-color;
+  margin-top: 0;
+}
+
+h3 {
+  @include font-size($font-size-medium);
+  margin-bottom: $gap-small;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: $padding-base;
+  color: $primary-color;
+}
+
+.skills {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
