@@ -1,0 +1,30 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html": "gulp html",
+    "styles": "gulp styles",
+    "build": "gulp",
+    "dev": "gulp dev",
+    "scripts": "gulp scripts",
+    "assets": "gulp assets"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}

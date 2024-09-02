@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldair - Portfolio</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header card">
+      <h1 id="headerName"></h1>
+      <div class="contact-info">
+        <p id="contactInfo"></p>
+      </div>
+      <p class="summary">
+        Experienced software engineer with a passion for building innovative web applications.
+      </p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Work Experience</h2>
+        <div class="job">
+          <h3>Software Engineer</h3>
+          <p>Acme Inc. | 2019 - Present</p>
+          <ul>
+            <li>Developed and maintained complex web applications using React, Node.js, and MongoDB.</li>
+            <li>Collaborated with cross-functional teams to design and implement new features and improvements.</li>
+            <li>Participated in code reviews, pair programming, and knowledge-sharing sessions to ensure code quality and maintainability.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3>Web Developer Intern</h3>
+          <p>Widgets Inc. | 2018 - 2019</p>
+          <ul>
+            <li>Developed and maintained responsive web pages using HTML, CSS, and JavaScript.</li>
+            <li>Collaborated with designers to implement UI/UX improvements and new features.</li>
+            <li>Participated in agile development processes, including daily standups and sprint planning.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Education</h2>
+        <div class="education">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>ITESO | 2020 - 2024</p>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>JavaScript, Python, Java, C++</li>
+          <li>React, Node.js, HTML/CSS, Git</li>
+          <li>MongoDB, PostgreSQL, MySQL</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website showcasing my work, skills, and experience. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+          <h3>E-commerce Platform</h3>
+          <p>A fully functional e-commerce platform with user authentication, product listings, and a shopping cart. Developed using React, Node.js, and MongoDB.</p>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Contact</h2>
+        <form id="contactForm" class="contact-form" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="formName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="formEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="formMessage" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="scripts/read_json.js"></script>
+</body>
+</html>
