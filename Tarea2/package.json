@@ -8,7 +8,9 @@
     "html": "gulp html",
     "styles": "gulp styles",
     "build": "gulp",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "scripts": "gulp scripts",
+    "assets": "gulp assets"
   },
   "author": "",
   "license": "ISC",
