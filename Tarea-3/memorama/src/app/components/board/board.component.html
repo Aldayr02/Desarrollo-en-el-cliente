@@ -1,0 +1,19 @@
+<div *ngIf="!gameService.showCongratulations">
+  <div class="board">
+    <app-card
+      *ngFor="let card of gameService.cards; let i = index"
+      [card]="card"
+      [isFlipped]="card.isFlipped"
+      (click)="cardClicked(i)">
+    </app-card>
+  </div>
+
+  <!-- Mostrar el número de intentos -->
+  <p>Intentos: {{ gameService.attempts }}</p>
+</div>
+
+<div *ngIf="gameService.showCongratulations" class="congratulations">
+  <h2>¡Felicidades!</h2>
+  <p>Has encontrado todos los pares en {{ gameService.attempts }} intentos.</p>
+  <button (click)="resetGame()">Jugar de nuevo</button>
+</div>
