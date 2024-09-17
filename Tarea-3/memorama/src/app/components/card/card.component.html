@@ -1,0 +1,11 @@
+<div class="card" (click)="flipCard()">
+    <div *ngIf="!isFlipped" class="card-back">
+      <!-- Imagen o contenido del reverso -->
+      ?
+    </div>
+    <div *ngIf="isFlipped" class="card-front">
+      <!-- Mostrar el contenido de la carta -->
+      {{ card.content }}
+    </div>
+  </div>
+  

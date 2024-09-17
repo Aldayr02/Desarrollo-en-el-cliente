@@ -1,0 +1,68 @@
+@import 'variables';
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; 
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  height: auto;
+}
+
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: $secondary-color
+}
+
+  
+.congratulations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: $secondary-color;
+  border-radius: 10px;
+
+  .congratulations-message {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    h3 {
+      color: $primary-color;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $background-color;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $background-color;
+      }
+    }
+  }
+}
+
+  
