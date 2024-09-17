@@ -1,5 +1,7 @@
+@import 'variables';
+
 .card {
-  background-color: #f10d0d;
+  background-color: $primary-color;
   width: 100%;
   height: 25%;
   border-radius: 10px;
@@ -10,7 +12,6 @@
   font-size: 2rem;
   color: white;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 
   &.flipped {

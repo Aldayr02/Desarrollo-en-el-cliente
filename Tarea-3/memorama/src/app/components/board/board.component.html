@@ -13,7 +13,12 @@
 </div>
 
 <div *ngIf="gameService.showCongratulations" class="congratulations">
-  <h2>¡Felicidades!</h2>
-  <p>Has encontrado todos los pares en {{ gameService.attempts }} intentos.</p>
-  <button (click)="resetGame()">Jugar de nuevo</button>
+  <div class="congratulations-container">
+    <div class="congratulations-message">
+      <h3>¡Felicidades!</h3>
+      <p>Has encontrado todos los pares en <strong>{{ gameService.attempts }}</strong> intentos.</p>
+      <button (click)="resetGame()">Jugar de nuevo</button>
+    </div>
+  </div>
+  
 </div>

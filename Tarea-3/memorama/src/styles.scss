@@ -1,25 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background: linear-gradient(135deg, #f9a8ff, #b6efff);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-  }
+  background: linear-gradient(135deg, #281234, #503162);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
   
-  button {
-    background-color: #a24bbf;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  
-    &:hover {
-      background-color: #6c33a2;
-    }
-  }
+
   
